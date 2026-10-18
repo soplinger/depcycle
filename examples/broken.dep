@@ -1,0 +1,9 @@
+# Deliberately broken manifest, used to demonstrate lint and cycle reports.
+app: ui api
+ui: core ui
+api: core db
+db: api
+core: cache
+cache core
+@forbid core -> nowhere
+@max-depth x

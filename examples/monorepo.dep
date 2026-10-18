@@ -1,0 +1,10 @@
+# Example monorepo. Each line lists what that package depends on.
+@forbid ui -> db
+@max-depth 4
+
+app: ui api
+ui: core
+api: core db
+db: core logger
+core: logger
+logger:
